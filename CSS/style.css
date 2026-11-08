@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+/* Общие настройки. Цвет и шрифт наследуются дочерними элементами. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #24332b;
+  background-color: #fffdf8;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+a {
+  color: #236446;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #143d2a;
+}
+
+a:focus-visible {
+  outline: 3px solid #9c5919;
+  outline-offset: 5px;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+/* Шапка и навигация. */
+.site-header {
+  padding: 24px 0;
+  background-color: #fffdf8;
+  border-bottom: 1px solid #e0e6dc;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+  color: #173f2d;
+}
+
+.logo span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation a {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Первый экран. */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #eaf1df;
+}
+
+.eyebrow {
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #436044;
+}
+
+h1 {
+  font-size: clamp(36px, 6vw, 68px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #173f2d;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 24px auto 30px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 28px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #236446;
+  border: 1px solid #236446;
+  border-radius: 12px;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: #173f2d;
+  border-color: #173f2d;
+}
+
+.hero-note {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #52634e;
+}
+
+/* О школе. */
+.section {
+  padding: 64px 0;
+}
+
+h2 {
+  margin-bottom: 22px;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.section-description {
+  max-width: 760px;
+}
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 34px;
+}
+
+.advantage {
+  padding-left: 20px;
+  border-left: 3px solid #9bb580;
+}
+
+h3 {
+  margin-bottom: 14px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* Карточки курсов. */
+.courses-section {
+  background-color: #f3f4ee;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px;
+  background-color: #ffffff;
+  border: 1px solid #dce3d6;
+  border-radius: 20px;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #436044;
+  background-color: #edf2e5;
+  border-radius: 20px;
+}
+
+.course-duration {
+  margin: 24px 0 20px;
+  font-size: 13px;
+  color: #5b665d;
+}
+
+.course-link {
+  margin-top: auto;
+  font-weight: 800;
+}
+
+/* Контакты и подвал. */
+.contact-panel {
+  padding: 40px;
+  text-align: center;
+  background-color: #eaf1df;
+  border: 1px solid #d4dfc7;
+  border-radius: 24px;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.site-footer {
+  padding: 28px 0;
+  font-size: 13px;
+  text-align: center;
+  color: #e6eddf;
+  background-color: #173f2d;
+}
+
+/* Адаптация для узких экранов. */
+@media (max-width: 760px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .navigation {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 56px 0;
+  }
+
+  .advantages,
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .contact-panel {
+    padding: 28px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
