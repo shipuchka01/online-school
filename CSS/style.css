@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
-  color: #24332b;
+  color: rgb(36, 51, 43);
   background-color: #fffdf8;
 }
 
@@ -47,8 +47,10 @@ a:focus-visible {
   outline-offset: 5px;
 }
 
+/* лр 5 */
 .container {
-  width: min(1120px, 90%);
+  width: 90%;
+  max-width: 70rem;
   margin: 0 auto;
 }
 
@@ -95,7 +97,7 @@ a:focus-visible {
 .hero {
   padding: 80px 0;
   text-align: center;
-  background-color: #eaf1df;
+  background-color: hsl(83, 39%, 91%);
 }
 
 .eyebrow {
@@ -159,15 +161,20 @@ h2 {
   max-width: 760px;
 }
 
+/* лр 5 */
 .advantages {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.75rem;
+  margin-top: 2rem;
 }
 
+/* лр 5 */
 .advantage {
-  padding-left: 20px;
+  flex: 1 1 15rem;
+  min-width: 0;
+  padding-left: 1.25rem;
   border-left: 3px solid #9bb580;
 }
 
@@ -182,21 +189,27 @@ h3 {
   background-color: #f3f4ee;
 }
 
+/* лр 5 */
 .course-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
+/* лр 5 */
 .course-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 28px;
-  background-color: #ffffff;
-  border: 1px solid #dce3d6;
-  border-radius: 20px;
+  flex: 1 1 18rem;
+  min-width: 0;
+  padding: 1.75rem;
+  background-color: white;
+  border: 1px solid rgba(35, 100, 70, 0.2);
+  border-radius: 1.25rem;
 }
 
 .tag {
@@ -206,7 +219,7 @@ h3 {
   font-size: 12px;
   font-weight: 700;
   color: #436044;
-  background-color: #edf2e5;
+  background-color: hsla(83, 33%, 92%, 0.9);
   border-radius: 20px;
 }
 
@@ -260,10 +273,16 @@ h3 {
     padding: 56px 0;
   }
 
-  .advantages,
-  .course-grid {
-    grid-template-columns: 1fr;
-  }
+  /* лр 5 */
+ .advantages,
+.course-grid {
+  flex-direction: column;
+}
+
+.advantage,
+.course-card {
+  flex: 0 1 auto;
+}
 
   .section {
     padding: 44px 0;
