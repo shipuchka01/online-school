@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Форма регистрации пользователя онлайн-школы Вектор."
+    >
+    <title>Регистрация — Вектор</title>
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+
+  <body class="registration-page">
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="logo" href="index.html">Вектор<span> школа</span></a>
+
+        <nav aria-label="Основная навигация">
+          <ul class="navigation">
+            <li><a href="index.html#about">О школе</a></li>
+            <li><a href="index.html#courses">Курсы</a></li>
+            <li><a href="index.html#contacts">Контакты</a></li>
+            <li>
+              <a href="form.html" aria-current="page">Регистрация</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="registration-main">
+      <div class="container registration-container">
+        <p class="eyebrow">Онлайн-школа Вектор</p>
+        <h1 class="registration-title">Регистрация</h1>
+        <p class="registration-intro">
+          Заполните информацию о себе.
+          Поля со звездочкой обязательны.
+        </p>
+
+        <form class="registration-form" id="registration-form" method="post">
+          <fieldset class="form-group">
+            <legend>Личная информация</legend>
+
+            <div class="form-field">
+              <label for="user-name">Имя *</label>
+              <input
+                id="user-name"
+                name="user_name"
+                type="text"
+                placeholder="Например, Михаил"
+                autocomplete="given-name"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="birth-date">Дата рождения</label>
+              <input
+                id="birth-date"
+                name="birth_date"
+                type="date"
+                autocomplete="bday"
+                aria-describedby="birth-hint"
+              >
+              <small id="birth-hint">
+                Выберите дату в календаре, например 15 мая 2005 года.
+              </small>
+            </div>
+
+            <div class="form-field">
+              <label for="gender">Пол</label>
+              <select id="gender" name="gender">
+                <option value="">Выберите вариант</option>
+                <option value="female">Женский</option>
+                <option value="male">Мужской</option>
+                <option value="not-specified">Не указывать</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="password">Пароль *</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Не менее 8 символов"
+                autocomplete="new-password"
+                minlength="8"
+                aria-describedby="password-hint"
+                required
+              >
+              <small id="password-hint">
+                Минимальная длина пароля — 8 символов.
+              </small>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-group">
+            <legend>Контактные данные</legend>
+
+            <div class="form-field">
+              <label for="email">Электронная почта *</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="name@example.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Телефон *</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="+7 999 123-45-67"
+                autocomplete="tel"
+                required
+              >
+            </div>
+
+            <div class="contact-times" role="group" aria-labelledby="time-label">
+              <p id="time-label">Удобный интервал для связи</p>
+              <p class="field-hint">Можно выбрать несколько вариантов.</p>
+
+              <div class="checkbox-list">
+                <label class="checkbox-option" for="time-morning">
+                  <input
+                    id="time-morning"
+                    name="contact_time"
+                    type="checkbox"
+                    value="morning"
+                  >
+                  Утро
+                </label>
+
+                <label class="checkbox-option" for="time-day">
+                  <input
+                    id="time-day"
+                    name="contact_time"
+                    type="checkbox"
+                    value="day"
+                  >
+                  День
+                </label>
+
+                <label class="checkbox-option" for="time-evening">
+                  <input
+                    id="time-evening"
+                    name="contact_time"
+                    type="checkbox"
+                    value="evening"
+                  >
+                  Вечер
+                </label>
+
+                <label class="checkbox-option" for="time-night">
+                  <input
+                    id="time-night"
+                    name="contact_time"
+                    type="checkbox"
+                    value="night"
+                  >
+                  Ночь
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <p class="form-note">
+            Учебная форма: данные не отправляются и учетная запись не создается.
+          </p>
+
+          <div class="form-actions">
+            <button class="button form-submit" type="submit">
+              <span aria-hidden="true">✓</span>
+              Зарегистрироваться
+            </button>
+
+            <button class="button button-secondary" type="reset">
+              <span aria-hidden="true">↺</span>
+              Очистить
+            </button>
+          </div>
+
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Вектор. Учебный проект онлайн-школы.</p>
+        <p>Лабораторная работа №6 «Ссылки и формы».</p>
+      </div>
+    </footer>
+
+    <script>
+      const registrationForm = document.querySelector("#registration-form");
+      const formStatus = document.querySelector("#form-status");
+
+      registrationForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formStatus.textContent =
+          "Форма заполнена корректно. Это учебная демонстрация, данные не отправлены.";
+      });
+
+      registrationForm.addEventListener("reset", () => {
+        formStatus.textContent = "";
+      });
+    </script>
+  </body>
+</html>

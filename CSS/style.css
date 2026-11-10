@@ -348,3 +348,182 @@ h3 {
   object-fit: cover;
   object-position: center;
 }
+
+/* Лабораторная работа №7: ссылки и формы. */
+/*подвал*/
+
+.registration-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* п */
+.registration-main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+.registration-container {
+  max-width: 48rem;
+}
+
+.registration-title {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.registration-intro {
+  margin-bottom: 2rem;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+  margin: 0;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #dce3d6;
+  border-radius: 1rem;
+}
+
+.form-group legend {
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #173f2d;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label,
+.contact-times > p:first-child {
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  min-width: 0;
+  min-height: 3rem;
+  padding: 0.75rem;
+  font: inherit;
+  color: #24332b;
+  background-color: #fffdf8;
+  border: 1px solid #8a9c8f;
+  border-radius: 0.5rem;
+}
+
+.form-field input::placeholder {
+  color: #66736a;
+  opacity: 1;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: 2px solid #236446;
+  outline-offset: 2px;
+}
+
+.form-field small,
+.field-hint,
+.form-note {
+  font-size: 0.875rem;
+  color: #52634e;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.checkbox-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-option input {
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: #236446;
+}
+
+.checkbox-option input:focus-visible {
+  outline: 2px solid #236446;
+  outline-offset: 3px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-actions .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button-secondary {
+  color: #236446;
+  background-color: transparent;
+}
+
+.button-secondary:hover {
+  color: white;
+  background-color: #236446;
+}
+
+.form-actions button:focus-visible {
+  outline: 3px solid #9c5919;
+  outline-offset: 3px;
+}
+
+.form-status {
+  color: #173f2d;
+  font-weight: 700;
+}
+
+.navigation a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.navigation a:active {
+  color: #9c5919;
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    padding: 1rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .button {
+    width: 100%;
+  }
+}
