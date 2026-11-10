@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
-/* Общие настройки. Цвет и шрифт наследуются дочерними элементами. */
 *,
 *::before,
 *::after {
@@ -279,4 +278,41 @@ h3 {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* Лабораторная работа 4 */
+
+.hero {
+  position: relative;
+  min-height: 480px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #9bb580;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.button {
+  min-width: 180px;
+}
+
+.course-card {
+  min-height: 340px;
+}
+
+.course-card > p:not(.course-duration) {
+  max-height: 160px;
+  overflow: auto;
 }
