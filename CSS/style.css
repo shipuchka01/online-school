@@ -335,3 +335,16 @@ h3 {
   max-height: 160px;
   overflow: auto;
 }
+
+/* Лабораторная работа №6 */
+
+.course-image {
+  display: block;
+  width: 100%;
+  height: 12rem;
+  flex-shrink: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  object-position: center;
+}
