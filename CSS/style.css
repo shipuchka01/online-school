@@ -580,33 +580,3 @@ button:focus {
   outline: 2px solid #236446;
   outline-offset: 3px;
 }
-
-.pseudo-examples {
-  margin-top: 48px;
-}
-
-.pseudo-list {
-  margin: 20px 0 0;
-  padding-left: 24px;
-}
-
-.pseudo-list li {
-  margin-bottom: 8px;
-  padding: 12px;
-  border-radius: 8px;
-  overflow-wrap: anywhere;
-}
-
-.pseudo-list li:nth-child(odd) {
-  color: #173f2d;
-  background-color: #eaf1df;
-}
-
-.pseudo-list li:nth-child(even) {
-  color: #514332;
-  background-color: #f5eee3;
-}
-
-.pseudo-list li::marker {
-  color: #236446;
-}
