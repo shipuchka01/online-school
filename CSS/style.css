@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
-  color: rgb(36, 51, 43);
+  color: #24332b;
   background-color: #fffdf8;
 }
 
@@ -47,10 +47,8 @@ a:focus-visible {
   outline-offset: 5px;
 }
 
-/* лр 5 */
 .container {
-  width: 90%;
-  max-width: 70rem;
+  width: min(1120px, 90%);
   margin: 0 auto;
 }
 
@@ -97,7 +95,7 @@ a:focus-visible {
 .hero {
   padding: 80px 0;
   text-align: center;
-  background-color: hsl(83, 39%, 91%);
+  background-color: #eaf1df;
 }
 
 .eyebrow {
@@ -161,20 +159,15 @@ h2 {
   max-width: 760px;
 }
 
-/* лр 5 */
 .advantages {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  gap: 1.75rem;
-  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 34px;
 }
 
-/* лр 5 */
 .advantage {
-  flex: 1 1 15rem;
-  min-width: 0;
-  padding-left: 1.25rem;
+  padding-left: 20px;
   border-left: 3px solid #9bb580;
 }
 
@@ -189,27 +182,21 @@ h3 {
   background-color: #f3f4ee;
 }
 
-/* лр 5 */
 .course-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
 }
 
-/* лр 5 */
 .course-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1 1 18rem;
-  min-width: 0;
-  padding: 1.75rem;
-  background-color: white;
-  border: 1px solid rgba(35, 100, 70, 0.2);
-  border-radius: 1.25rem;
+  padding: 28px;
+  background-color: #ffffff;
+  border: 1px solid #dce3d6;
+  border-radius: 20px;
 }
 
 .tag {
@@ -219,7 +206,7 @@ h3 {
   font-size: 12px;
   font-weight: 700;
   color: #436044;
-  background-color: hsla(83, 33%, 92%, 0.9);
+  background-color: #edf2e5;
   border-radius: 20px;
 }
 
@@ -273,16 +260,10 @@ h3 {
     padding: 56px 0;
   }
 
-  /* лр 5 */
- .advantages,
-.course-grid {
-  flex-direction: column;
-}
-
-.advantage,
-.course-card {
-  flex: 0 1 auto;
-}
+  .advantages,
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
 
   .section {
     padding: 44px 0;
@@ -526,4 +507,106 @@ h3 {
   .form-actions .button {
     width: 100%;
   }
+}
+
+/* Лабораторная работа №8: псевдоклассы и псевдоэлементы. */
+::selection {
+  color: #ffffff;
+  background-color: #236446;
+}
+
+a:hover {
+  color: #143d2a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:active {
+  color: #8a4316;
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid #9c5919;
+  outline-offset: 4px;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: #173f2d;
+  text-decoration: none;
+}
+
+.button:active {
+  color: #ffffff;
+  background-color: #102e20;
+  border-color: #102e20;
+  transform: translateY(1px);
+}
+
+.form-field input::placeholder {
+  color: #52634e;
+  font-style: italic;
+  opacity: 1;
+}
+
+.form-field input:required {
+  border-left: 4px solid #236446;
+  background-color: #f4f7ef;
+}
+
+.choice-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.choice-group legend {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #24332b;
+}
+
+.checkbox-option input:checked + span {
+  color: #173f2d;
+  font-weight: 800;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.checkbox-option input:focus {
+  outline: 2px solid #236446;
+  outline-offset: 3px;
+}
+
+.pseudo-examples {
+  margin-top: 48px;
+}
+
+.pseudo-list {
+  margin: 20px 0 0;
+  padding-left: 24px;
+}
+
+.pseudo-list li {
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.pseudo-list li:nth-child(odd) {
+  color: #173f2d;
+  background-color: #eaf1df;
+}
+
+.pseudo-list li:nth-child(even) {
+  color: #514332;
+  background-color: #f5eee3;
+}
+
+.pseudo-list li::marker {
+  color: #236446;
 }

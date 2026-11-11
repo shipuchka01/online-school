@@ -69,15 +69,23 @@
               </small>
             </div>
 
-            <div class="form-field">
-              <label for="gender">Пол</label>
-              <select id="gender" name="gender">
-                <option value="">Выберите вариант</option>
-                <option value="female">Женский</option>
-                <option value="male">Мужской</option>
-                <option value="not-specified">Не указывать</option>
-              </select>
-            </div>
+            <fieldset class="choice-group">
+              <legend>Пол</legend>
+              <div class="checkbox-list">
+                <label class="checkbox-option" for="gender-female">
+                  <input id="gender-female" name="gender" type="radio" value="female">
+                  <span>Женский</span>
+                </label>
+                <label class="checkbox-option" for="gender-male">
+                  <input id="gender-male" name="gender" type="radio" value="male">
+                  <span>Мужской</span>
+                </label>
+                <label class="checkbox-option" for="gender-unspecified">
+                  <input id="gender-unspecified" name="gender" type="radio" value="not-specified">
+                  <span>Не указывать</span>
+                </label>
+              </div>
+            </fieldset>
 
             <div class="form-field">
               <label for="password">Пароль *</label>
@@ -136,7 +144,7 @@
                     type="checkbox"
                     value="morning"
                   >
-                  Утро
+                  <span>Утро</span>
                 </label>
 
                 <label class="checkbox-option" for="time-day">
@@ -146,7 +154,7 @@
                     type="checkbox"
                     value="day"
                   >
-                  День
+                  <span>День</span>
                 </label>
 
                 <label class="checkbox-option" for="time-evening">
@@ -156,7 +164,7 @@
                     type="checkbox"
                     value="evening"
                   >
-                  Вечер
+                  <span>Вечер</span>
                 </label>
 
                 <label class="checkbox-option" for="time-night">
@@ -166,7 +174,7 @@
                     type="checkbox"
                     value="night"
                   >
-                  Ночь
+                  <span>Ночь</span>
                 </label>
               </div>
             </div>
@@ -190,13 +198,28 @@
 
           <p class="form-status" id="form-status" role="status"></p>
         </form>
+
+        <section class="pseudo-examples" aria-labelledby="pseudo-title">
+          <h2 id="pseudo-title">Псевдоэлементы CSS</h2>
+          <p>Памятка к занятию по веб-разработке.</p>
+          <ul class="pseudo-list">
+            <li><code>::first-letter</code> — оформление первой буквы.</li>
+            <li><code>::first-line</code> — оформление первой строки.</li>
+            <li><code>::selection</code> — оформление выделенного текста.</li>
+            <li><code>::marker</code> — оформление маркера списка.</li>
+            <li><code>::before</code> — содержимое перед содержимым элемента.</li>
+            <li><code>::after</code> — содержимое после содержимого элемента.</li>
+            <li><code>::placeholder</code> — оформление подсказки в поле.</li>
+          </ul>
+        </section>
+
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="container">
         <p>© 2026 Вектор. Учебный проект онлайн-школы.</p>
-        <p>Лабораторная работа №6 «Ссылки и формы».</p>
+        <p>Лабораторная работа №8 «Псевдоклассы и псевдоэлементы».</p>
       </div>
     </footer>
 
